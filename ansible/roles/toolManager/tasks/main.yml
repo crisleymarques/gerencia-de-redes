@@ -1,0 +1,26 @@
+---
+# tasks file for toolManager
+- name: "Atualizar cache de pacotes"
+  apt:
+    update_cache: yes
+
+- name: "Instalar lighttpd"
+  apt:
+    name: lighttpd
+    state: present
+
+- name: "Iniciar o serviço lighttpd e habilitá-lo na inicialização"
+  service:
+    name: lighttpd
+    state: started
+    enabled: yes
+
+- name: "Cria diretorio web"
+  file:
+    path: "{{ meu_diretorio }}"
+    state: directory
+
+- name: "Copia arquivo index.html para o /meu_diretorio_web"
+  copy:
+    src: /files/index.html
+    dest: "{{ meu_diretorio }}"

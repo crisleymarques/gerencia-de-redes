@@ -1,0 +1,5 @@
+- hosts: hosts_gerencia
+  become: yes
+
+  roles:
+    - toolManager
