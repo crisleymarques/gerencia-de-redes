@@ -1,6 +1,6 @@
 ---
 # vars file for toolManager
-meu_diretorio: /home/gerencia/meu_diretorio_web
+meu_diretorio: /meu_diretorio_web
 server_port: "8080"
 
 

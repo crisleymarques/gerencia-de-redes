@@ -24,3 +24,9 @@
   copy:
     src: /files/index.html
     dest: "{{ meu_diretorio }}"
+
+- name: "altera arquivo lighttpd.conf"
+  template:
+    src: templates/lighttpd.conf
+    dest: /etc/lighttpd/lighttpd.conf
+
