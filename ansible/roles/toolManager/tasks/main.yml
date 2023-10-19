@@ -22,7 +22,7 @@
 
 - name: "Copia arquivo index.html para o /meu_diretorio_web"
   copy:
-    src: /files/index.html
+    src: files/index.html
     dest: "{{ meu_diretorio }}"
 
 - name: "altera arquivo lighttpd.conf"
